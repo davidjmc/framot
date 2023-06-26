@@ -1,0 +1,6 @@
+OP - operation
+IP -
+TOPICS - related topics
+THING_ID - thing id
+MSG - (string|object) message
+DATA - byte array to be transmited

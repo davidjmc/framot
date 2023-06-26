@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "json-rules-engine": "^6.1.2",
+    "firebase": "^8.7.1",
+    "lowdb": "^1.0.0"
+  }
+}

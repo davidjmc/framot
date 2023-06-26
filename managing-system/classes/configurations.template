@@ -1,0 +1,16 @@
+configurations = {
+    "application": {
+        "loop_interval": __APP_INTERVAL__,
+        "publish_in": __APP_PUBLISH_IN__,
+        "subscribe_to": __APP_SUBSCRIBE_TO__ 
+    },
+    "device": {
+        "id": __THING_ID__,
+        "location": __THING_LOCAL__
+    },
+    "environment": {
+        "broker_host": __ENV_BROKER_HOST__,
+        "broker_port": __ENV_BROKER_PORT__,
+        "await_broker_response": __ENV_RESPONSE__
+    }
+}

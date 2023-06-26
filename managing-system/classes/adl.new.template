@@ -1,0 +1,16 @@
+adl = {
+    'components': {
+        __COMPONENTS__
+    },
+    'attachments': {
+        __ATTACHMENTS__
+    },
+    'adaptability': {
+        'type': __ADAPT_TYPE__,
+        'timeout': __ADAPT_TIMEOUT__
+    },
+    'configuration': {
+        'start': __STARTER__,
+        'otherConfigs': {}
+    }
+}

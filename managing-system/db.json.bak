@@ -1,0 +1,128 @@
+{
+    "components": [
+        {
+            "id": "AdaptationProxy-1.0",
+            "version": "1.0",
+            "name": "AdaptationProxy",
+            "type": "AdaptationProxy",
+            "file": "AdaptationProxy"
+        },
+
+        {
+            "id": "ClientRequestHandler-1.0",
+            "version": "1.0",
+            "name": "ClientRequestHandler",
+            "type": "ClientRequestHandler",
+            "file": "ClientRequestHandler"
+        },
+
+        {
+            "id": "Executor-1.0",
+            "version": "1.0",
+            "name": "Executor",
+            "type": "Executor",
+            "file": "Executor"
+        },
+
+        {
+            "id": "LoggerSubscriber-1.0",
+            "version": "1.0",
+            "name": "LoggerSubscriber",
+            "type": "App",
+            "file": "LoggerSubscriber"
+        },
+
+        {
+            "id": "Marshaller-1.0",
+            "version": "1.0",
+            "name": "Marshaller",
+            "type": "Marshaller",
+            "file": "Marshaller"
+        },
+
+        {
+            "id": "NotificationConsumer-1.0",
+            "version": "1.0",
+            "name": "NotificationConsumer",
+            "type": "NotificationConsumer",
+            "file": "NotificationConsumer"
+        },
+
+        {
+            "id": "NotificationEngine-1.0",
+            "version": "1.0",
+            "name": "NotificationEngine",
+            "type": "NotificationEngine",
+            "file": "NotificationEngine"
+        },
+
+        {
+            "id": "Notifier-1.0",
+            "version": "1.0",
+            "name": "Notifier",
+            "type": "Notifier",
+            "file": "Notifier"
+        },
+
+        {
+            "id": "NotifierProxy-1.0",
+            "version": "1.0",
+            "name": "NotifierProxy",
+            "type": "NotifierProxy",
+            "file": "NotifierProxy"
+        },
+
+        {
+            "id": "QueueProxy-1.0",
+            "version": "1.0",
+            "name": "QueueProxy",
+            "type": "QueueProxy",
+            "file": "QueueProxy"
+        },
+
+        {
+            "id": "ServerRequestHandler-1.0",
+            "version": "1.0",
+            "name": "ServerRequestHandler",
+            "type": "ServerRequestHandler",
+            "file": "ServerRequestHandler"
+        },
+
+        {
+            "id": "Subscriptor-1.0",
+            "version": "1.0",
+            "name": "Subscriptor",
+            "type": "Subscriptor",
+            "file": "Subscriptor"
+        },
+
+        {
+            "id": "TemperatureChecker-1.0",
+            "version": "1.0",
+            "name": "TemperatureChecker",
+            "type": "App",
+            "file": "TemperatureChecker"
+        },
+
+        {
+            "id": "Unmarshaller-1.0",
+            "version": "1.0",
+            "name": "Unmarshaller",
+            "type": "Unmarshaller",
+            "file": "Unmarshaller"
+        }
+    ],
+    "things": [
+        {
+            "id": 1,
+            "components": ["TemperatureChecker-1.0", "QueueProxy-1.0", "Marshaller-1.0", "ClientRequestHandler-1.0"],
+            "attachments": [
+                {"from": "TemperatureChecker-1.0", "to": "QueueProxy-1.0"},
+                {"from": "QueueProxy-1.0", "to": "Marshaller-1.0"},
+                {"from": "Marshaller-1.0", "to": "ClientRequestHandler-1.0"}
+            ],
+            "starter": ["TemperatureChecker-1.0"],
+            "adaptability": null
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+Components = {
+    __COMPONENTS__
+}
+
+Attachments = {
+    __ATTACHMENTS__
+}
+
+Starter = {
+    __STARTER__
+}
+
+Adaptability = {
+    'type': __ADAPT_TYPE__,
+    'timeout': __ADAPT_TIMEOUT__
+}

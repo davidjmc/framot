@@ -1,0 +1,127 @@
+{
+  "components": [
+    {
+      "id": "NewClientRequestHandler-1.0",
+      "version": 1,
+      "name": "ClientRequestHandler",
+      "type": "ClientRequestHandler",
+      "file": "NewClientRequestHandler"
+    },
+    {
+      "id": "NewMarshaller-1.0",
+      "version": 1,
+      "name": "Marshaller",
+      "type": "Marshaller",
+      "file": "NewMarshaller"
+    },
+    {
+      "id": "NewQueueProxy-1.0",
+      "version": 1,
+      "name": "QueueProxy",
+      "type": "QueueProxy",
+      "file": "NewQueueProxy"
+    },
+    {
+      "id": "NewServerRequestHandler-1.0",
+      "version": 1,
+      "name": "ServerRequestHandler",
+      "type": "ServerRequestHandler",
+      "file": "NewServerRequestHandler"
+    },
+    {
+      "id": "NewBrokerProxy-1.0",
+      "version": 1,
+      "name": "BrokerProxy",
+      "type": "BrokerProxy",
+      "file": "NewBrokerProxy"
+    },
+    {
+      "id": "NewBrokerEngine-1.0",
+      "version": 1,
+      "name": "BrokerEngine",
+      "type": "BrokerEngine",
+      "file": "NewBrokerEngine"
+    }
+  ],
+  "things": [
+    {
+      "id": "1-new",
+      "components": [
+        "NewQueueProxy-1.0",
+        "NewMarshaller-1.0",
+        "NewClientRequestHandler-1.0"
+      ],
+      "attachments": [
+        {
+          "from": "QueueProxy",
+          "to": "Marshaller"
+        },
+        {
+          "from": "Marshaller",
+          "to": "ClientRequestHandler"
+        }
+      ],
+      "starter": [
+        "QueueProxy"
+      ],
+      "adaptability": {
+        "type": "evolutive",
+        "timeout": 5
+      }
+    },
+    {
+      "id": "sub-new",
+      "components": [
+        "NewQueueProxy-1.0",
+        "NewMarshaller-1.0",
+        "NewClientRequestHandler-1.0"
+      ],
+      "attachments": [
+        {
+          "from": "QueueProxy",
+          "to": "Marshaller"
+        },
+        {
+          "from": "Marshaller",
+          "to": "ClientRequestHandler"
+        }
+      ],
+      "starter": [
+        "QueueProxy"
+      ],
+      "adaptability": {
+        "type": "evolutive",
+        "timeout": 5
+      }
+    },
+    {
+      "id": "broker-new",
+      "components": [
+        "NewBrokerProxy-1.0",
+        "NewMarshaller-1.0",
+        "NewServerRequestHandler-1.0",
+        "NewBrokerEngine-1.0"
+      ],
+      "attachments": [
+        {
+          "from": "BrokerProxy",
+          "to": "ServerRequestHandler"
+        },
+        {
+          "from": "ServerRequestHandler",
+          "to": "Marshaller"
+        },
+        {
+          "from": "Marshaller",
+          "to": "BrokerEngine"
+        }
+      ],
+      "starter": [
+        "BrokerProxy"
+      ],
+      "adaptability": {
+        "type": "None"
+      }
+    }
+  ]
+}

@@ -1,1 +1,1 @@
-../../../amot-2/components/ServerRequestHandler.py
+../../../middleware/components/ServerRequestHandler.py

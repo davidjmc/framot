@@ -1,1 +1,1 @@
-../../../amot-2/components/QueueProxy.py
+../../../middleware/components/QueueProxy.py

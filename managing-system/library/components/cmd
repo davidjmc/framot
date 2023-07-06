@@ -1,0 +1,6 @@
+rm NewBrokerEngine.py && ln -s ../../../middleware/components/BrokerEngine.py NewBrokerEngine.py
+rm NewBrokerProxy.py && ln -s ../../../middleware/components/BrokerProxy.py NewBrokerProxy.py
+rm NewClientRequestHandler.py && ln -s ../../../middleware/components/ClientRequestHandler.py NewClientRequestHandler.py
+rm NewMarshaller.py && ln -s ../../../middleware/components/Marshaller.py NewMarshaller.py
+rm NewQueueProxy.py && ln -s ../../../middleware/components/QueueProxy.py NewQueueProxy.py
+rm NewServerRequestHandler.py && ln -s ../../../middleware/components/ServerRequestHandler.py NewServerRequestHandler.py

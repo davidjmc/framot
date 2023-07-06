@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:11.4
+    container_name: postgres
+    environment:
+      POSTGRES_PASSWORD: dev_pass
+      POSTGRES_USER: dev
+      POSTGRES_DB: water_db
+    ports:
+      - 5432:5432
+    networks:
+      - development
+
+networks:
+  development:
+    driver: bridge

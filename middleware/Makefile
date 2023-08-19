@@ -3,31 +3,52 @@ set:
 	sed -i "s/_host':.*/_host':'$(IP)',/g" examples/**/variables.py
 
 publisher:
-	mkdir -p generated/amot-publisher/
-	rm -rf generated/amot-publisher/*
-	mkdir -p generated/amot-publisher/components/
+	# mkdir -p generated/amot-publisher/
+	# rm -rf generated/amot-publisher/*
+	# mkdir -p generated/amot-publisher/components/
 
-	cp amot.py generated/amot-publisher/
-	cp agent.py generated/amot-publisher/
+	# cp amot.py generated/amot-publisher/
+	# cp agent.py generated/amot-publisher/
 	
-	cp examples/publisher/main.py generated/amot-publisher/main.py
-	cp examples/publisher/app.py generated/amot-publisher/
-	cp examples/publisher/variables.py generated/amot-publisher/
-	cp examples/publisher/env.ini generated/amot-publisher/
+	# cp examples/publisher/main.py generated/amot-publisher/main.py
+	# cp examples/publisher/app.py generated/amot-publisher/
+	# cp examples/publisher/variables.py generated/amot-publisher/
+	# cp examples/publisher/env.ini generated/amot-publisher/
 
+	mkdir -p generated/amot/publisher/
+	rm -rf generated/amot/publisher/*
+	mkdir -p generated/amot/publisher/components/
+
+	cp amot.py generated/amot/publisher/
+	cp agent.py generated/amot/publisher/
+	
+	cp ../samples/amot/publisher/main.py generated/amot/publisher/
+	cp ../samples/amot/publisher/app.py generated/amot/publisher/
+	cp ../samples/amot/publisher/configurations.py generated/amot/publisher/
 
 subscriber:
-	mkdir -p generated/amot-subscriber/
-	rm -rf generated/amot-subscriber/*
-	mkdir -p generated/amot-subscriber/components/
+	# mkdir -p generated/amot-subscriber/
+	# rm -rf generated/amot-subscriber/*
+	# mkdir -p generated/amot-subscriber/components/
 
-	cp amot.py generated/amot-subscriber/
-	cp agent.py generated/amot-subscriber/
+	# cp amot.py generated/amot-subscriber/
+	# cp agent.py generated/amot-subscriber/
 	
-	cp examples/subscriber/main.py generated/amot-subscriber/
-	cp examples/subscriber/app.py generated/amot-subscriber/
-	cp examples/subscriber/variables.py generated/amot-subscriber/
-	cp examples/subscriber/env.ini generated/amot-subscriber/
+	# cp examples/subscriber/main.py generated/amot-subscriber/
+	# cp examples/subscriber/app.py generated/amot-subscriber/
+	# cp examples/subscriber/variables.py generated/amot-subscriber/
+	# cp examples/subscriber/env.ini generated/amot-subscriber/
+
+	mkdir -p generated/amot/subscriber/
+	rm -rf generated/amot/subscriber/*
+	mkdir -p generated/amot/subscriber/components/
+
+	cp amot.py generated/amot/subscriber/
+	cp agent.py generated/amot/subscriber/
+	
+	cp ../samples/amot/subscriber/main.py generated/amot/subscriber/
+	cp ../samples/amot/subscriber/app.py generated/amot/subscriber/
+	cp ../samples/amot/subscriber/configurations.py generated/amot/subscriber/
 
 
 broker:
@@ -84,10 +105,12 @@ all:
 
 
 run-publisher:
-	cd generated/amot-publisher && python3 main.py
+	# cd generated/amot-publisher && python3 main.py
+	cd generated/amot/publisher && python3 main.py
 
 run-subscriber:
-	cd generated/amot-subscriber && python3 main.py
+	# cd generated/amot-subscriber && python3 main.py
+	cd generated/amot/subscriber && python3 main.py
 
 run-broker:
 	cd generated/amot-broker && python3 main.py
